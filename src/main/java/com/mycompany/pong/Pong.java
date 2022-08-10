@@ -9,10 +9,16 @@ package com.mycompany.pong;
  *
  * @author smrki
  */
-public class Pong {
+
+import javax.swing.JFrame;
+
+public class Pong extends JFrame{
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
         // TEST TEST TEST
+        
+        
+        
     }
 }
