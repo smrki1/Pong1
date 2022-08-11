@@ -18,8 +18,8 @@ public class Pong extends JFrame{
         private final static int  WINDOW_WIDTH = 800;
         private final static int WINDOW_HEIGHT = 600;
     public Pong() {
-        setTitle("Game of Pong");
-        setSize(800,600);
+        setTitle(WINDOW_TITLE);
+        setSize(WINDOW_WIDTH,WINDOW_HEIGHT);
         setResizable(false);
         add(new PongPanel());
         setVisible(true);
