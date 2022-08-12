@@ -59,6 +59,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
       @Override
       public void actionPerformed(ActionEvent event) {
           update();
+          repaint();   //method to update the graphics, comes from java.awt package
       }
       
       @Override
