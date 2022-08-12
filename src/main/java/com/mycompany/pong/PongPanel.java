@@ -16,11 +16,19 @@ import java.awt.Color;
    import java.awt.event.KeyListener;
    import javax.swing.JPanel;
    import javax.swing.Timer;
+   import java.awt.Graphics;
+   import java.awt.Graphics2D;
+
+
+
+
+
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
     //test test
    
     private final static Color BACKGROUND_COLOR = Color.BLACK;
     private final static int TIMER_DELAY = 5;
+    
     public PongPanel() {
        
           setBackground(BACKGROUND_COLOR);
@@ -41,10 +49,25 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
       @Override
       public void keyTyped(KeyEvent event) {
       }
-  
+      
+      
+      private void update() {
+          
+      }
+      
+      
       @Override
       public void actionPerformed(ActionEvent event) {
-      } 
+          update();
+      }
+      
+      @Override
+      public void paint(Graphics g) {
+          super.paintComponent(g);
+          g.setColor(Color.WHITE);
+          g.fillRect(20,20,100,100);
+      }
+      
     
     
     
