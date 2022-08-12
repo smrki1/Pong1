@@ -64,8 +64,8 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
       @Override
       public void paint(Graphics g) {
           super.paintComponent(g);
-          g.setColor(Color.WHITE);
-          g.fillRect(20,20,100,100);
+          //g.setColor(Color.WHITE);  nepotrebno jer samo testira da li crta
+          //g.fillRect(20,20,100,100);
       }
       
     
