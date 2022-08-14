@@ -10,12 +10,16 @@ package com.mycompany.pong;
  */
 
 import java.awt.Color;
+import java.awt.Rectangle;
 
 public class Sprite {
     private int xPosition, yPosition;
     private int xVelocity, yVelocity;
     private int width, height;
     private Color colour;
+    
+    private int initialxPosition;
+    private int initialyPosition;
     
     public int getxPosition() {
         return xPosition;
@@ -74,4 +78,39 @@ public class Sprite {
         this.colour = colour; 
     }
     
+    
+    public void setInitialPosition(int initialxPosition, int initialyPosition) {
+        initialxPosition = initialX;
+        initialyPosition = initialY;
+    
+    }
+    
+    public void setxPosition(int newX, int panelWidth) {
+     xPosition = newX;
+     if(xPosition < 0) {
+         xPosition = 0;
+     }
+     else if (xPosition + width > panelWidth) {
+         xPosition = panelWidth - width;
+     }
+       
+     }
+    public void setyPosition(int newY, int panelHeight) {
+     yPosition = newY;
+     if(yPosition < 0) {
+         yPosition = 0;
+     }
+     else if (yPosition + height > panelHeight) {
+         yPosition = panelHeight - height;
+     }
+    }
+    
+     public void resetToInitialPosition() {
+      setxPosition(initialxPosition);
+       setyPosition(initialyPosition);
+     }
+    
+    public Rectangle getRectangle() {
+         return new Rectangle(getxPosition(), getyPosition(), getWidth(), getHeight());
+     }
 }
