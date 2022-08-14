@@ -29,7 +29,7 @@ import java.awt.Color;
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
     //test test
    
-    private final static Color BACKGROUND_COLOR = Color.BLACK;
+    private final static Color BACKGROUND_COLOUR = Color.BLACK;
     private final static int TIMER_DELAY = 5;
     
     private void paintDottedLine(Graphics g) {
@@ -45,7 +45,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
     
     public PongPanel() {
        
-          setBackground(BACKGROUND_COLOR);
+          setBackground(BACKGROUND_COLOUR);
           Timer timer = new Timer(TIMER_DELAY,this);
             timer.start();
           
