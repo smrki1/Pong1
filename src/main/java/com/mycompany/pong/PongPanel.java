@@ -34,9 +34,9 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
     
     
     
-    Ball ball; //ads a Ball variable to the Pong class
+    Ball ball; //ads a ball variable of a type Ball to the Pong class
     
-    boolean gameInitialised = false;  // a bollean which will be set to truewhen the game "starts"
+    boolean gameInitialised = false;  // a bollean which will be set to true when the game "starts"(initialises etc)
     
     
     private void paintDottedLine(Graphics g) {
@@ -71,10 +71,14 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
       public void keyTyped(KeyEvent event) {
       }
       
+      public void createObjects() {
+          ball = new Ball(getWidth(), getHeight());  //creates a ball object with certain dimensions???
+      }
+      
       
       private void update() {
           if(!gameInitialised) {
-              createObjects();   // SOMETHING IS WRONG HERE!!! No such method exists yet!
+              createObjects();   
               gameInitialised = true;
           }
           
@@ -91,6 +95,10 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
       public void paintComponent(Graphics g) {
           super.paintComponent(g);
           paintDottedLine(g);
+          
+          if(gameInitialised) {
+              paintSprite(g, ball);
+          }
           
           //g.setColor(Color.WHITE);  nepotrebno jer samo testira da li crta
           //g.fillRect(20,20,100,100);
