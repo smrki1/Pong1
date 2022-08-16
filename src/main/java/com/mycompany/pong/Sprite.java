@@ -79,7 +79,7 @@ public class Sprite {
     }
     
     
-    public void setInitialPosition(int initialxPosition, int initialyPosition) {
+    public void setInitialPosition(int initialX, int initialY) {
         initialxPosition = initialX;
         initialyPosition = initialY;
     
